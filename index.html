@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Vue-->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+    <title>Vue CDN</title>
+</head>
+
+<body>
+    <div id="app">
+        <h1> {{nome}} </h1>
+        <p>
+            {{numero}}
+        </p>
+
+        <button @click="adicionarNumero">+</button>
+        <button @click="removerNumero">-</button>
+    </div>
+
+    <script>
+        const App = {
+            data() {
+                return {
+                    nome: "Amauri Blanco",
+                    numero: 0
+                }
+            },
+            methods: {
+                adicionarNumero() {
+                    this.numero++
+                },
+                removerNumero() {
+                    this.numero--
+                }
+            }
+        }
+
+        Vue.createApp(App).mount('#app')
+
+    </script>
+</body>
+
+</html>
